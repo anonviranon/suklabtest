@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sliding Poster Pamphlet</title>
   <style>
     * {
@@ -54,14 +54,14 @@
     }
 
     .poster {
-      width: 100%;
-      max-width: 850px;
-      height: 100%;
-      background-size: contain;
+      width: 100%; /* Ensure full width */
+      max-width: 850px; /* Limit maximum width */
+      height: auto; /* Ensure proportional scaling */
+      min-height: 300px; /* Set a minimum height for portrait mode */
+      background-size: cover; /* Ensure the image covers the container */
       background-repeat: no-repeat;
       background-position: center;
-      transition: transform 0.3s ease-in-out;
-      display: block;
+      display: block; /* Ensure visibility */
     }
 
     .poster:hover {
@@ -152,15 +152,21 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (orientation: portrait) {
   .poster {
-    max-width: 100%; /* Ensure full width */
-    max-height: none; /* Allow flexibility */
-    height: auto; /* Ensure proper scaling */
-    width: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Prevent cropping */
-    display: block; /* Ensure visibility */
+    max-height: 50vh; /* Limit height to half the viewport */
+    height: auto; /* Maintain aspect ratio */
+    background-size: contain; /* Ensure the image is fully visible */
   }
+
+  .slider-wrapper {
+    height: auto; /* Allow dynamic height */
+  }
+
+  .section {
+    justify-content: center; /* Center the content */
+  }
+}
   .slider-wrapper {
     height: auto; /* Allow dynamic height */
   }
