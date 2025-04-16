@@ -118,8 +118,7 @@
 
     @media (max-width: 768px) {
   .slider-wrapper {
-    height: auto;
-    margin-top: 10px;
+    height: calc(95vh - 150px);
   }
 
   .poster {
@@ -156,7 +155,7 @@
   .poster {
     max-height: 50vh; /* Limit height to half the viewport */
     height: auto; /* Maintain aspect ratio */
-    background-size: contain; /* Ensure the image is fully visible */
+    background-size: cover; /* Ensure the image is fully visible */
   }
 
   .slider-wrapper {
