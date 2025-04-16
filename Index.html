@@ -116,21 +116,70 @@
     }
 
     @media (max-width: 768px) {
-      .slider-wrapper {
-        height: auto;
-        margin-top: 10px;
-      }
+  .slider-wrapper {
+    height: auto;
+    margin-top: 10px;
+  }
 
-      .poster {
-        max-height: 60vh;
-        width: auto;
-        object-fit: contain;
-      }
+  .poster {
+    max-height: 60vh;
+    width: auto;
+    object-fit: contain;
+  }
 
-      .section {
-        padding-top: 10px;
-      }
-    }
+  .section {
+    padding-top: 10px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  footer {
+    font-size: 18px;
+  }
+
+  .nav-buttons button {
+    font-size: 1.5em; /* Decrease button size for smaller screens */
+    padding: 5px 15px; /* Adjust padding */
+  }
+
+  .slider-nav button {
+    width: 16px; /* Increase size for better touch interaction */
+    height: 16px;
+    margin: 8px; /* Increase spacing between dots */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 24px; /* Adjust base font size for very small screens */
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .poster {
+    max-height: 50vh; /* Further reduce poster size for smaller screens */
+  }
+
+  .nav-buttons button {
+    font-size: 1.2em; /* Further adjust button size for very small screens */
+    padding: 5px 10px;
+  }
+
+  .slider-nav button {
+    width: 14px; /* Further increase size for small screens */
+    height: 14px;
+    margin: 6px;
+  }
+
+  footer {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
 
     .video-bg {
       position: fixed;
